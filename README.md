@@ -1,1 +1,0 @@
-# SmartyPants-Study-Tracker
