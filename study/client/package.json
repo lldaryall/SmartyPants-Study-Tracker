@@ -1,0 +1,14 @@
+{
+  "name": "smarty-pants-study-tracker-client",
+  "version": "1.0.0",
+  "private": true,
+  "homepage": "https://lldaryall.github.io/SmartyPants-Study-Tracker",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  }
+} 
