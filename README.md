@@ -30,7 +30,7 @@ files = {
 A Smart Study Tracker app built with the MERN stack (MongoDB, Express, React, Node.js). Log your study sessions, view your progress through data visualization, and manage your study workflow with ease.
 
 ## Features
-- User authentication with JWT (dummy user for demo purposes)
+- User authentication with JWT
 - CRUD operations for study sessions (subject, duration, date)
 - Dashboard displaying your sessions and a bar chart summarizing study time by subject
 - Responsive design and a modern React frontend
@@ -38,11 +38,11 @@ A Smart Study Tracker app built with the MERN stack (MongoDB, Express, React, No
 ## Setup Instructions
 
 ### Prerequisites
-- [Node.js](https://nodejs.org/)
+- [Node.js](https://nodejs.org/) (v14 or higher)
 - [MongoDB](https://www.mongodb.com/) (local or cloud)
   
 ### Server Setup
-1. Open a terminal and navigate to the `server` folder:
+1. Navigate to the server directory:
     ```bash
     cd server
     ```
@@ -56,15 +56,15 @@ A Smart Study Tracker app built with the MERN stack (MongoDB, Express, React, No
     ```
    Then edit `.env` to include your:
    - `MONGO_URI` (your MongoDB connection string)
-   - `JWT_SECRET` (any secret phrase)
+   - `JWT_SECRET` (any secure secret phrase)
 4. Start the server:
     ```bash
     npm start
     ```
-   The backend will run on port **5000**.
+   The backend will run on port **5001**.
 
 ### Client Setup
-1. In another terminal, navigate to the `client` folder:
+1. Navigate to the client directory:
     ```bash
     cd client
     ```
@@ -78,9 +78,16 @@ A Smart Study Tracker app built with the MERN stack (MongoDB, Express, React, No
     ```
    The frontend will run on [http://localhost:3000](http://localhost:3000).
 
+## Usage
+1. Open your browser to `http://localhost:3000`
+2. Log in with the default credentials:
+   - Username: `student`
+   - Password: `password`
+3. Start tracking your study sessions!
+
 ## Deployment
-- **Client:** Deploy on Netlify, Vercel, or GitHub Pages.
-- **Server:** Deploy on Heroku, Render, or any Node hosting platform.
+- **Client:** Deploy on Netlify, Vercel, or GitHub Pages
+- **Server:** Deploy on Heroku, Render, or any Node hosting platform
 
 ## License
 MIT License
