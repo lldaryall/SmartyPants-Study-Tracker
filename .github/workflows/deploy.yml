@@ -18,21 +18,19 @@ jobs:
 
       - name: Install dependencies
         run: |
-          cd "study"
-          cd client
+          cd "$GITHUB_WORKSPACE/study/client"
           npm install
           npm install gh-pages --save-dev
 
       - name: Build
         run: |
-          cd "study"
-          cd client
+          cd "$GITHUB_WORKSPACE/study/client"
           npm run build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./study/client/build
+          publish_dir: ${{ github.workspace }}/study/client/build
           publish_branch: gh-pages
           force_orphan: true 
