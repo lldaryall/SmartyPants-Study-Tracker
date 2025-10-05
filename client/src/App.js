@@ -2,12 +2,13 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Login from './components/Login';
 import Dashboard from './components/Dashboard';
+import api from './services/api';
 
 function App() {
-  const isAuthenticated = localStorage.getItem('token');
+  const isAuthenticated = api.isAuthenticated();
 
   return (
-    <Router>
+    <Router basename="/SmartyPants-Study-Tracker">
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/dashboard" element={isAuthenticated ? <Dashboard /> : <Navigate to="/login" />} />

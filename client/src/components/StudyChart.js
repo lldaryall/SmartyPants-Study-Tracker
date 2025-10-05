@@ -27,10 +27,48 @@ function StudyChart({ sessions }) {
     ]
   };
 
+  const options = {
+    responsive: true,
+    plugins: {
+      legend: {
+        position: 'top',
+      },
+      title: {
+        display: true,
+        text: 'Study Time Distribution by Subject'
+      },
+    },
+    scales: {
+      y: {
+        beginAtZero: true,
+        title: {
+          display: true,
+          text: 'Minutes'
+        }
+      }
+    }
+  };
+
   return (
-    <div style={{ marginTop: '2rem' }}>
-      <h3>Study Time by Subject</h3>
-      <Bar data={data} />
+    <div style={{ 
+      marginTop: '2rem',
+      padding: '1.5rem',
+      backgroundColor: '#f8f9fa',
+      borderRadius: '8px',
+      border: '1px solid #dee2e6'
+    }}>
+      <h3 style={{ marginTop: 0, color: '#2c3e50' }}>📊 Study Time by Subject</h3>
+      {sessions.length === 0 ? (
+        <p style={{ 
+          textAlign: 'center', 
+          color: '#7f8c8d',
+          padding: '2rem'
+        }}>
+          No data to display yet. Add some study sessions to see your progress!
+        </p>
+      ) : (
+        <Bar data={data} options={options} />
+      )}
     </div>
   );
 }
